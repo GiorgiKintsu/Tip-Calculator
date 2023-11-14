@@ -19,7 +19,11 @@ let tipAmount = 0;
 let total = 0;
 
 billInput.addEventListener("input", event => {
-    bilValue = parseInt(event.target.value);
+    if (event.target.value === "") {
+        bilValue = 0;
+    }else{
+        bilValue = parseInt(event.target.value);
+    }
     calculator();
     
 });
@@ -37,7 +41,11 @@ tipsInput.map(button => {
 })
 
 customInput.addEventListener("input", event => {
-    tipsValue = parseInt(event.target.value);
+    if (event.target.value === "") {
+        tipsValue = 0;
+    }else{
+        tipsValue = parseInt(event.target.value);
+    }
     for(let i = 0; i < tipsInput.length; i++){
         tipsInput[i].classList.remove("tipsClicked");
     }
@@ -59,8 +67,8 @@ peopleInput.addEventListener("input", event => {
 
 
 function calculator(){
-    if (bilValue && peopleValue && tipsValue) {
-        tipAmount = (bilValue * tipsValue/100) / peopleValue;
+    if (bilValue && peopleValue) {
+        tipAmount = bilValue * (tipsValue/100) / peopleValue;
         total = bilValue/peopleValue + tipAmount
         tipResult.innerText = `$${tipAmount.toFixed(2)}`;
         totalResult.innerText = `$${total.toFixed(2)}`;
