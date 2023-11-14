@@ -31,6 +31,7 @@ tipsInput.map(button => {
             tipsInput[i].classList.remove("tipsClicked");
         }
         button.classList.add("tipsClicked");
+        customInput.value = 0;
         calculator();   
     })
 })
