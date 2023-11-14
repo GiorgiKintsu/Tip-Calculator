@@ -47,7 +47,7 @@ customInput.addEventListener("input", event => {
 
 peopleInput.addEventListener("input", event => {
     peopleValue = parseInt(event.target.value);
-    if(peopleValue == "" || peopleValue > 0){
+    if(peopleValue == "" || peopleValue == 0){
         error.style.display = "block";
         peopleInput.style.borderColor = "#E17052";
     }else{
