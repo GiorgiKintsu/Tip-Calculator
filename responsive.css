@@ -1,0 +1,49 @@
+@media only screen and (max-width: 950px) {
+    body{
+        height: auto;
+    }
+    .calculatorDiv{
+        width: 375px;
+        height: 789px;
+        flex-direction: column;
+        padding: 32px;
+        gap: 32px;
+    }
+    .calculatorDiv .leftSide{
+        width: 311px;
+        gap: 32px;
+    }
+    .calculatorDiv .leftSide .bottomSide,
+    .calculatorDiv .leftSide .topSide{
+        width: 311px;
+    }
+    .calculatorDiv .leftSide .bottomSide input,
+    .calculatorDiv .leftSide .topSide input{
+        width: 311px;
+    }
+    .calculatorDiv .leftSide .middleSide{
+        width: 311px;
+    }
+    .calculatorDiv .leftSide .middleSide .tipsDiv input,
+    .calculatorDiv .leftSide .middleSide .tipsDiv button{
+        width: 146px;
+        height: 48px;
+    }
+    .calculatorDiv .rightSide{
+        width: 327px;
+        height: 257px;
+        gap: 0px;
+    }
+    .calculatorDiv .rightSide .results{
+        width: 281px;
+        gap: 0px;
+    }
+    .calculatorDiv .rightSide .results div h3{
+        font-size: 2rem;
+    }
+    .calculatorDiv .rightSide button{
+        width: 281px;
+        height: 48px;
+    }
+
+}
